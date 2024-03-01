@@ -1,0 +1,36 @@
+actor hesap_makinesi {
+var hucre: Int = 0;
+
+public func toplama(s : Int) : async Int {
+  hucre += s;
+  hucre
+
+};
+public func cikar(s : Int) : async Int{
+  hucre -= s;
+  hucre
+};
+
+
+public func carp(s : Int) : async Int{
+  hucre *= s;
+  hucre
+};
+
+
+public func bolme(s : Int) : async ?Int{
+ if(s == 0){
+   null
+ }else{
+   hucre/= s;
+   ?hucre
+ };
+};
+
+//temizleme
+
+public func temizleme() : async (){
+  hucre := 0;
+};
+
+};
